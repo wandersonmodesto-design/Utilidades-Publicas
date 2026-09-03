@@ -106,7 +106,7 @@ button::before{
     height: 200%;
     background: linear-gradient(90deg,transparent,rgba(255,255,255,1),transparent);
     transform: rotate(20deg);
-    animation: brilho 3s infinite;
+    animation: brilho 5s infinite;
 }
 
 @keyframes brilho{
