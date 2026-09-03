@@ -16,6 +16,13 @@ body{
     background-attachment: fixed;
 }
 
+.area{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background: rgba(0, 83, 190, 0.5);
+}
+
 .container{
     width: 400px;
     padding: 35px;
@@ -89,4 +96,47 @@ button:hover{
 
 footer{
     color: #fff;
+}
+
+.resultado{
+    width: 100%;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #2f00ff;
+    border-radius: 20px;
+    border: 6px solid #00eeff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
+    text-align: center;
+    display: none;
+}
+
+.resultado h2{
+    margin: 0;
+    color: #fff;
+}
+
+.resultado p{
+    margin: 15px 0 5px;
+    color: #fff;
+}
+
+.resultado strong{
+    font-size: 30px;
+    color: #00eeff;
+}
+
+.resultado.mostrar{
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
