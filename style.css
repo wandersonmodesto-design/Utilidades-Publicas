@@ -55,7 +55,8 @@ select{
     padding: 13px;
     border: 5px solid #000000;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #00d9ff;
+    font-family:Comic Sans MS, Comic Sans, cursive;
     border-radius: 10px;
     font-size: 16px;
     border: 4px solid #000000;
@@ -77,14 +78,46 @@ button{
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
+    position: relative;
+    overflow: hidden;
 }
+
+button::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,1),transparent);
+    transform: rotate(20deg);
+    animation: brilho 3s infinite;
+}
+
+@keyframes brilho{
+    0%{
+        left: -100%;
+    }
+    35%{
+        left: 150%;
+    }
+    100%{
+        left: 150%;
+    }
+}
+
 
 button:hover{
     background-color: #001572;
     color: #ffffff;
+    transform: scale(1.03);
     box-shadow: 0 6px 8px rgb(82, 206, 255);
+}
+
+button:active{
+    transform: scale(0.98);
 }
 
 @media (max-width: 500px){
@@ -102,32 +135,35 @@ footer{
     width: 100%;
     margin-top: 20px;
     padding: 25px;
-    background-color: #2f00ff;
+    background-color: transparent;
     border-radius: 20px;
-    border: 6px solid #00eeff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
+    border: 6px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 30);
     text-align: center;
     display: none;
 }
 
 .resultado h2{
     margin: 0;
-    color: #fff;
+    color: #ffffff;
+    font-family: Verdana;
 }
 
 .resultado p{
     margin: 15px 0 5px;
     color: #fff;
+    font-family: Verdana;
 }
 
 .resultado strong{
     font-size: 30px;
-    color: #00eeff;
+    color: #00ffea;
 }
 
 .resultado.mostrar{
     display: block;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+
 }
 
 @keyframes fadeIn{
