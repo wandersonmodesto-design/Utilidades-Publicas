@@ -2,54 +2,70 @@ function consultar(){
 
     let departamento = document.getElementById("departamento").value;
 
+    let nome = "";
+    let telefone = "";
+
     if (departamento === "") {
-        alert("Por favor, selecione um departamento.");
         return;
     }
 
     switch(departamento){
         case "pm":
-            alert("Polícia Militar\n" + "Telefone: 190\n");
+            nome = "Polícia Militar";
+            telefone = "190";
             break;
         case "bombeiros":
-            alert("Bombeiros\n" + "Telefone: 193\n");
+            nome = "Bombeiros";
+            telefone = "193";
             break;
         case "samu":
-            alert("SAMU\n" + "Telefone: 192\n");
+            nome = "SAMU";
+            telefone = "192";
             break;
         case "df":
-            alert("Defesa Civil\n" + "Telefone: 199\n");
+            nome = "Defesa Civil";
+            telefone = "199";
             break;
         case "pc":
-            alert("Polícia Civil\n" + "Telefone: 197\n");
+            nome = "Polícia Civil";
+            telefone = "197";
             break;
         case "deat":
-            alert("Delegacia do Turista\n" + "Telefone: (21) 2332-2924\n");
+            nome = "Delegacia do Turista";
+            telefone = "(21) 2332-2924";
             break;
         case "disqued":
-            alert("Disque Denúncia\n" + "Telefone: (21) 2253-1177\n");
+            nome = "Disque Denúncia";
+            telefone = "(21) 2253-1177";
             break;
         case "cdaam":
-            alert("Central de Atendimento a mulher\n" + "Telefone: 180\n");
+            nome = "Central de Atendimento a mulher";
+            telefone = "180";
             break;
         case "dh":
-            alert("Direitos Humanos\n" + "Telefone: 100\n");
+            nome = "Direitos Humanos";
+            telefone = "100";
             break;
         case "procon":
-            alert("Procon\n" + "Telefone: 151\n");
+            nome = "Procon";
+            telefone = "151";
             break;
         case "hemorio":
-            alert("HemoRio\n" + "Telefone: (21) 2332-8611\n");
+            nome = "HemoRio";
+            telefone = "(21) 2332-8611";
             break;
         case "detran":
-            alert("Detran\n" + "Telefone: (21) 3460-4040\n");
+            nome = "Detran";
+            telefone = "(21) 3460-4040";
             break;
         case "dambiente":
-            alert("Disque Ambiente\n" + "Telefone: (21) 2334-7910\n");
+            nome = "Disque Ambiente";
+            telefone = "(21) 2334-7910";
             break;
 
-        default:
-            alert("Departamento não encontrado.");
-            break;
     }
+    document.getElementById("nomeDepartamento").textContent = nome;
+    document.getElementById("telefone").textContent = telefone;
+
+    document.getElementById("resultado").classList.add("mostrar");
 }
